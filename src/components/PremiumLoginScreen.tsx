@@ -55,12 +55,6 @@ export interface PremiumLoginScreenProps {
    * Only applies when `appearance` is `"light"`.
    */
   marketingBrand?: { prefix: string; accent: string };
-  /** Google Sign-In press handler — button is hidden when not provided */
-  onGoogleSignIn?: () => void;
-  /** Apple Sign-In press handler (iOS only) — button is hidden when not provided */
-  onAppleSignIn?: () => Promise<void>;
-  /** Which social provider is currently loading — shows spinner on that button */
-  socialLoading?: "google" | "apple" | null;
 }
 
 // ── Dark Input ───────────────────────────────────────────────────────────
@@ -127,9 +121,6 @@ export function PremiumLoginScreen({
   socialLoading,
   style,
   marketingBrand,
-  onGoogleSignIn,
-  onAppleSignIn,
-  socialLoading,
 }: PremiumLoginScreenProps) {
   const insets = useSafeAreaInsets();
   // Form state
