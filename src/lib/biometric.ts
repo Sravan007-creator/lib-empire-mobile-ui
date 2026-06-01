@@ -1,3 +1,4 @@
+// @ts-expect-error – expo-local-authentication is a peer dependency not installed in this project
 import * as LocalAuthentication from "expo-local-authentication";
 import { AppState, type AppStateStatus } from "react-native";
 import { getItem } from "./storage";
